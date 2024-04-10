@@ -21,29 +21,40 @@
 
     
     <material name="white">
-        <color rbga="1 1 1 1" />
+        <color rgba="1 1 1 1" />
     </material>
     
     <material name="orange">
-        <color rbga="1 0.3 0.1 1" />
+        <color rgba="1 0.3 0.1 1" />
     </material>
 
     <material name="blue">
-        <color rbga="0.2 0.2 1 1" />
+        <color rgba="0.2 0.2 1 1" />
     </material>
 
     <material name="balck">
-        <color rbga="0 0 0 1" />
+        <color rgba="0 0 0 1" />
     </material>
 
     <material name="red">
-        <color rbga="1 0 0 1" />
+        <color rgba="1 0 0 1" />
     </material>
 
 
     <!-- BASE LINK -->
     <link name="base_link">
 
+    </link>
+
+     <!-- BASE_FOOTPRINT LINK -->
+
+     <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="base_footprint">
     </link>
 
 
